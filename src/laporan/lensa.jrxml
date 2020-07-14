@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="517cca63-4732-41a4-914e-5285ba1fb22a">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="163"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     lensa.`kd_lensa` AS lensa_kd_lensa,
+     lensa.`nama_lensa` AS lensa_nama_lensa,
+     lensa.`jenis_lensa` AS lensa_jenis_lensa,
+     lensa.`harga_lensa` AS lensa_harga_lensa
+FROM
+     `lensa` lensa]]>
+	</queryString>
+	<field name="lensa_kd_lensa" class="java.lang.String"/>
+	<field name="lensa_nama_lensa" class="java.lang.String"/>
+	<field name="lensa_jenis_lensa" class="java.lang.String"/>
+	<field name="lensa_harga_lensa" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="22ca2099-09d9-483e-bd82-076cb1fc90b5" x="139" y="12" width="294" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Kristen ITC" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA LENSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="22ca2099-09d9-483e-bd82-076cb1fc90b5" x="139" y="42" width="294" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Kristen ITC" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUKA KAMERA SOLO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="68" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="169" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="268" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="368" y="0" width="100" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="86795e5b-cdbc-451a-99c8-aa9c065a2917" x="67" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KODE LENSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="317e4a00-9278-4069-a141-5c1082371ed3" x="168" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA LENSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a5d283c-0993-4440-b223-0c3e22c919dd" x="268" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JENIS LENSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="86ccaab8-6d4b-4f7c-b4ca-d3cc083baf1b" x="368" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HARGA LENSA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="368" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="268" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="68" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f58bd605-11f5-41df-b2f1-af44fb54fdb2" x="169" y="0" width="100" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="6bf9cf85-da1a-442c-bced-7fad2a36e80e" x="69" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lensa_kd_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3f2d7f7-4e4f-47ae-9665-6e5f7376bc3e" x="168" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lensa_nama_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="857ef49e-8a53-4ebf-9448-d8b6ed1d3e28" x="268" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lensa_jenis_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a9f926db-78f8-4ea2-a85a-2d48c73c7c9c" x="368" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lensa_harga_lensa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="24" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

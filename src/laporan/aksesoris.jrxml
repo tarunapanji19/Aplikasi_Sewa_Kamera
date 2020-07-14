@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="672f0279-3e76-43ec-8e4b-d15baa663ecb">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="65"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     aksesoris.`kd_aksesoris` AS aksesoris_kd_aksesoris,
+     aksesoris.`nama_aksesoris` AS aksesoris_nama_aksesoris,
+     aksesoris.`jenis_aksesoris` AS aksesoris_jenis_aksesoris,
+     aksesoris.`harga_aksesoris` AS aksesoris_harga_aksesoris
+FROM
+     `aksesoris` aksesoris]]>
+	</queryString>
+	<field name="aksesoris_kd_aksesoris" class="java.lang.String"/>
+	<field name="aksesoris_nama_aksesoris" class="java.lang.String"/>
+	<field name="aksesoris_jenis_aksesoris" class="java.lang.String"/>
+	<field name="aksesoris_harga_aksesoris" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="22ca2099-09d9-483e-bd82-076cb1fc90b5" x="146" y="12" width="294" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Kristen ITC" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA AKSESORIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="22ca2099-09d9-483e-bd82-076cb1fc90b5" x="146" y="42" width="294" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Kristen ITC" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUKA KAMERA SOLO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="54" y="2" width="106" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="160" y="2" width="128" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="289" y="2" width="99" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="388" y="2" width="99" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="3ca12ab5-cccf-4e5d-b88b-a1fe7fdcb730" x="53" y="2" width="107" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE AKSESORIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b456c998-ec34-4648-af20-018453d42b02" x="160" y="2" width="129" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA AKSESORIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="711cc87b-1a31-4425-adfd-0c5730c49ce4" x="288" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS AKSESORIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f47d5ae6-76ef-47f6-bd65-c29a58951a0a" x="387" y="2" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA AKSESORIS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="160" y="0" width="128" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="54" y="0" width="106" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="388" y="0" width="99" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5ae67154-3d0a-44c6-a527-eb81c129d580" x="289" y="0" width="99" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="e68f56b3-b6f9-4029-b95a-8fa0d20dc3c0" x="53" y="0" width="107" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aksesoris_kd_aksesoris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b8b104b6-a0bc-43cd-a7b6-2aeda6fe3386" x="160" y="0" width="129" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aksesoris_nama_aksesoris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="abe5edfe-34d1-44bd-84a2-5563145737fc" x="288" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aksesoris_jenis_aksesoris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6e49e6f0-6fff-494b-b35c-02636b8b1a76" x="387" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aksesoris_harga_aksesoris}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

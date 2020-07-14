@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f8ee243a-5da2-4281-a0a7-9e762ed718f3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="117"/>
+	<property name="ireport.y" value="26"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     kamera.`kd_kamera` AS kamera_kd_kamera,
+     kamera.`nama_kamera` AS kamera_nama_kamera,
+     kamera.`jenis_kamera` AS kamera_jenis_kamera,
+     kamera.`harga_kamera` AS kamera_harga_kamera
+FROM
+     `kamera` kamera]]>
+	</queryString>
+	<field name="kamera_kd_kamera" class="java.lang.String"/>
+	<field name="kamera_nama_kamera" class="java.lang.String"/>
+	<field name="kamera_jenis_kamera" class="java.lang.String"/>
+	<field name="kamera_harga_kamera" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="22ca2099-09d9-483e-bd82-076cb1fc90b5" x="234" y="24" width="294" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Kristen ITC" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="22ca2099-09d9-483e-bd82-076cb1fc90b5" x="234" y="54" width="294" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Kristen ITC" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUKA KAMERA SOLO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="406" y="41" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="279" y="41" width="127" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="179" y="41" width="100" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="36fbbf2b-717d-4a38-9cf3-15b4f31c68b0" x="507" y="39" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HARGA KAMERA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="506" y="41" width="100" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f5a6222f-5b8f-4c47-abe2-070ef938070a" x="179" y="41" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KODE KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f423cb6e-a8b2-4550-b00f-9f6e2a1e3cfc" x="279" y="41" width="127" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="16c30108-c1b2-45f8-a186-8ba972c96840" x="406" y="41" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JENIS KAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="36fbbf2b-717d-4a38-9cf3-15b4f31c68b0" x="506" y="41" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HARGA KAMERA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="279" y="0" width="127" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="506" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="406" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e899d485-3486-4ddc-8a8e-2a3cfa43c451" x="179" y="0" width="100" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="ee9cd93b-947d-465b-9e7a-d189cfce004f" x="406" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kamera_jenis_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="14fc008e-13ba-4fa6-8093-21b44c6c624d" x="179" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kamera_kd_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c7390f9a-7915-4844-b10e-984d908ce28f" x="505" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kamera_harga_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cc483a67-3b7a-487b-942b-65c93dc315cb" x="279" y="0" width="127" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kamera_nama_kamera}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

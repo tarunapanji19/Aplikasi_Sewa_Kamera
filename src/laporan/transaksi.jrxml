@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fbc42ac3-8b37-4ff8-8f0e-97337cc8e409">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     transaksi_kamera.`no_transaksi` AS transaksi_kamera_no_transaksi,
+     transaksi_kamera.`id_pelanggan` AS transaksi_kamera_id_pelanggan,
+     transaksi_kamera.`kd_kamera` AS transaksi_kamera_kd_kamera,
+     transaksi_kamera.`nama_kamera` AS transaksi_kamera_nama_kamera,
+     transaksi_kamera.`harga_kamera` AS transaksi_kamera_harga_kamera,
+     transaksi_kamera.`jmlsw_kamera` AS transaksi_kamera_jmlsw_kamera,
+     transaksi_kamera.`lamasw_kamera` AS transaksi_kamera_lamasw_kamera,
+     transaksi_kamera.`kd_lensa` AS transaksi_kamera_kd_lensa,
+     transaksi_kamera.`nama_lensa` AS transaksi_kamera_nama_lensa,
+     transaksi_kamera.`harga_lensa` AS transaksi_kamera_harga_lensa,
+     transaksi_kamera.`jmlsw_lensa` AS transaksi_kamera_jmlsw_lensa,
+     transaksi_kamera.`lamasw_lensa` AS transaksi_kamera_lamasw_lensa,
+     transaksi_kamera.`kd_aksesoris` AS transaksi_kamera_kd_aksesoris,
+     transaksi_kamera.`nama_aksesoris` AS transaksi_kamera_nama_aksesoris,
+     transaksi_kamera.`harga_aksesoris` AS transaksi_kamera_harga_aksesoris,
+     transaksi_kamera.`jmlsw_akse` AS transaksi_kamera_jmlsw_akse,
+     transaksi_kamera.`lamasw_akse` AS transaksi_kamera_lamasw_akse,
+     transaksi_kamera.`total` AS transaksi_kamera_total,
+     transaksi_kamera.`bayar` AS transaksi_kamera_bayar,
+     transaksi_kamera.`kembali` AS transaksi_kamera_kembali
+FROM
+     `transaksi_kamera` transaksi_kamera]]>
+	</queryString>
+	<field name="transaksi_kamera_no_transaksi" class="java.lang.String"/>
+	<field name="transaksi_kamera_id_pelanggan" class="java.lang.String"/>
+	<field name="transaksi_kamera_kd_kamera" class="java.lang.String"/>
+	<field name="transaksi_kamera_nama_kamera" class="java.lang.String"/>
+	<field name="transaksi_kamera_harga_kamera" class="java.lang.String"/>
+	<field name="transaksi_kamera_jmlsw_kamera" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_lamasw_kamera" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_kd_lensa" class="java.lang.String"/>
+	<field name="transaksi_kamera_nama_lensa" class="java.lang.String"/>
+	<field name="transaksi_kamera_harga_lensa" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_jmlsw_lensa" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_lamasw_lensa" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_kd_aksesoris" class="java.lang.String"/>
+	<field name="transaksi_kamera_nama_aksesoris" class="java.lang.String"/>
+	<field name="transaksi_kamera_harga_aksesoris" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_jmlsw_akse" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_lamasw_akse" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_total" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_bayar" class="java.lang.Integer"/>
+	<field name="transaksi_kamera_kembali" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e90cdf24-2c98-4d39-86c0-b9a8c3f7fe6c" x="184" y="0" width="407" height="36"/>
+				<textElement textAlignment="Center">
+					<font fontName="Kristen ITC" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA TRANSAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e90cdf24-2c98-4d39-86c0-b9a8c3f7fe6c" x="184" y="45" width="407" height="36"/>
+				<textElement textAlignment="Center">
+					<font fontName="Kristen ITC" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUKA KAMERA SOLO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="1a0afc26-3361-46b6-9836-4764752bc054" x="0" y="0" width="770" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="49ff6c8b-7deb-49ba-820e-e9187f04b3a8" x="0" y="0" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NO. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c676008-4007-4edc-9b01-a80008dc166e" x="30" y="0" width="42" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID CUST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d3b45b56-5ab2-4519-995b-2432a5bbacd9" x="71" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KD CAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9f541368-f2f2-4e0c-b5ad-25bc947180ab" x="121" y="0" width="109" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA CAMERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="00755794-be40-4398-855e-f4eb960e05d1" x="278" y="0" width="39" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JML]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b5555c24-52a2-4ab8-b718-469e6af86049" x="316" y="0" width="45" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KD LENS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c27dbe35-6694-41f2-bcc7-e81879450872" x="361" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA  LENSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="474eb44a-95d1-4554-99f1-26101e16d7f1" x="461" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cc71857-46c8-426a-8002-f9c4615b7b53" x="512" y="0" width="29" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JML]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="41e86b21-c3c0-440e-b2e7-e81985407184" x="230" y="0" width="49" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e252f2f4-38b0-4744-919b-af8324f521fc" x="541" y="1" width="50" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[KD AKSE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3acfcfd2-797f-4625-baf3-fd5e0c298589" x="591" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NAMA AKSE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="53e28209-be6e-4f5e-91dc-d740461a97ea" x="691" y="1" width="45" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96699939-8833-41d1-bfb3-a1c9f7c93f42" x="736" y="2" width="34" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[JML]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="55" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="1666b240-5980-4280-a4d7-d3b5050ab141" x="0" y="0" width="770" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1a0afc26-3361-46b6-9836-4764752bc054" x="442" y="27" width="105" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1a0afc26-3361-46b6-9836-4764752bc054" x="552" y="27" width="120" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1a0afc26-3361-46b6-9836-4764752bc054" x="677" y="27" width="120" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="5bcb11e3-486b-4d8b-9ecd-6037f8523259" x="0" y="0" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_no_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="45259d24-a2e7-44f8-b6e1-92153e9b3c26" x="30" y="0" width="42" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_id_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="97a37c55-9116-446a-bafe-ffcdd008bd01" x="71" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_kd_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="38425111-e768-4aeb-bfba-aca1e8fdc096" x="121" y="0" width="109" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_nama_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="04ed6eac-2512-492d-bf11-fc1c42c11f36" x="230" y="0" width="49" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_harga_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4fd0b286-c53c-4689-83c4-6a62247a203a" x="278" y="0" width="39" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_jmlsw_kamera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8b1862f8-5a0e-45ce-bf8e-c8bdea5f8a25" x="316" y="0" width="45" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_kd_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a2a19a9c-22b4-4947-ae72-1fcdfa1e8b58" x="361" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_nama_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="25a27778-3789-4d74-afcd-393732223ff1" x="461" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_harga_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ccbe9b6-3c0b-4fb4-98bb-0d7f03e740c1" x="512" y="0" width="29" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_jmlsw_lensa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b16e4c2-6606-43c6-b9ff-5715b9d50aa5" x="541" y="0" width="50" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_kd_aksesoris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="37444a91-0c66-49de-9919-080700954f5a" x="591" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_nama_aksesoris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4e2b2ba6-0ea7-4ce0-897e-dd2abddfbc57" x="691" y="1" width="45" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_harga_aksesoris}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7a8e50d5-9e94-4a5c-b7b0-9149dfb8e8a1" x="736" y="1" width="34" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_jmlsw_akse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="404823a3-6582-4dd4-a936-524ffdead135" x="488" y="27" width="56" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="06a4e1f0-f8e8-47d1-bec8-08cf0b49c88e" x="446" y="27" width="49" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4f2d0769-b4fe-4e6d-8b1e-e0cabfdda318" x="604" y="27" width="63" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_bayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="68fb8733-2ade-4c43-92cc-b236f901743f" x="555" y="27" width="57" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BAYAR]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="db6fbe9a-e52e-4345-9585-64fd17604e37" x="738" y="27" width="55" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_kamera_kembali}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1e42a94b-236e-4b32-8d43-87e17b1f57ec" x="680" y="27" width="66" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[KEMBALI]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
